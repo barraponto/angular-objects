@@ -12,4 +12,17 @@ angular.module('Waitstaff', [])
     $scope.total = function(){
         return $scope.subtotal() + $scope.tip();
     };
+
+    $scope.tips = [];
+    $scope.validation = function() {
+        return $scope.mealprice > 0;
+    };
+    $scope.onSubmit = function(e) {
+        if ($scope.validation()) {
+            $scope.tips.push($scope.tip());
+            $scope.mealprice = 0;
+        }
+        console.log($scope.tips);
+        e.preventDefault();
+    };
 });

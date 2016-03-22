@@ -20,7 +20,7 @@
           <div class="panel panel-default">
             <div class="panel-heading">Enter the Meal Details</div>
             <div class="panel-body">
-              <form class="form-horizontal" action="">
+              <form ng-submit="onSubmit($event)" class="form-horizontal">
 
                 <div class="form-group">
                   <label for="meal-price" class="control-label col-sm-3">
@@ -65,10 +65,12 @@
                 </div>
 
                 <div class="col-md-6 text-center">
-                  <button class="btn btn-default" type="button" aria-label="Submit">
+                  <button 
+                    class="btn btn-default" type="submit" aria-label="Submit">
                     Submit
                   </button>
-                  <button class="btn btn-danger" type="button" aria-label="Cancel">
+                  <button 
+                    class="btn btn-danger" type="button" aria-label="Cancel">
                     Cancel
                   </button>
                 </div>
