@@ -25,4 +25,17 @@ angular.module('Waitstaff', [])
         console.log($scope.tips);
         e.preventDefault();
     };
+    $scope.tiptotal = function() {
+        return $scope.tips.reduce(function(a,b){ return a+b; }, 0);
+    };
+    $scope.mealcount = function() {
+        return $scope.tips.length;
+    };
+    $scope.averagetip = function() {
+        if ($scope.mealcount()) {
+            return $scope.tiptotal() / $scope.mealcount();
+        } else {
+            return 0;
+        }
+    };
 });
