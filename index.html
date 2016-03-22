@@ -31,7 +31,7 @@
                       <span class="input-group-addon">$</span>
                       <input ng-model='mealprice'
                       id="meal-price" class="form-control" 
-                      type="number" placeholder="9.99">
+                      type="number" placeholder="0.00">
                     </div>
                   </div>
                 </div>
@@ -45,7 +45,7 @@
                       <span class="input-group-addon">%</span>
                       <input ng-model="taxrate"
                       id="tax-rate" class="form-control" 
-                      type="number" placeholder="9.99">
+                      type="number" placeholder="0">
                     </div>
                   </div>
                 </div>
@@ -59,7 +59,7 @@
                       <span class="input-group-addon">%</span>
                       <input ng-model="tiprate"
                       id="tip-rate" class="form-control" 
-                      type="number" placeholder="9.99">
+                      type="number" placeholder="0">
                     </div>
                   </div>
                 </div>
@@ -82,15 +82,15 @@
             <table class="table">
               <tr>
                 <td>Subtotal</td>
-                <td>{{mealprice}}</td>
+                <td>{{ subtotal() }}</td>
               </tr>
               <tr>
                 <td>Tip</td>
-                <td>0.00</td>
+                <td>{{ tip() }}</td>
               </tr>
               <tr>
                 <td>Total</td>
-                <td>0.00</td>
+                <td>{{ total() }}</td>
               </tr>
             </table>
           </div>
