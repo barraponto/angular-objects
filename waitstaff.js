@@ -22,7 +22,6 @@ angular.module('Waitstaff', [])
             $scope.tips.push($scope.tip());
             $scope.mealprice = 0;
         }
-        console.log($scope.tips);
         e.preventDefault();
     };
     $scope.tiptotal = function() {
