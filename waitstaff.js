@@ -7,4 +7,9 @@ angular.module('Waitstaff', [])
         $scope.waiter.addTip($scope.meal.tip());
         $scope.meal = new Meal();
     };
+
+    $scope.onReset = function(e) {
+        $scope.meal = new Meal();
+        $scope.waiter = new Waiter();
+    };
 });
