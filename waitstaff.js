@@ -38,4 +38,7 @@ angular.module('Waitstaff', [])
             return 0;
         }
     };
+    $scope.onReset = function(e) {
+         $scope.tips = [];
+    };
 });
